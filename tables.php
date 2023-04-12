@@ -132,7 +132,7 @@ if (isset($_POST["insererdatabase"])) {
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -148,122 +148,121 @@ if (isset($_POST["insererdatabase"])) {
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+<!-- Sidebar - Brand -->
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
 
 
 
-                <img src="img/users.png" />
-                <div class="sidebar-brand-text mx-3">pfe GA </div>
+    <img src="img/users.png" />
+    <div class="sidebar-brand-text mx-3">pfe GA </div>
+</a>
 
-            </a>
+<!-- Divider -->
+<hr class="sidebar-divider my-0">
+<li class="nav-item active">
+    <a class="nav-link" href="index.php">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Table de bord </span></a>
+</li>
+<hr class="sidebar-divider my-0">
+<!-- Nav Item - Dashboard -->
+<li class="nav-item active">
+    <a class="nav-link" href="tables.php">
+        <i class="material-icons">home</i><span> Absences</span></a>
+</li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashborde </span></a>
-            </li>
-            <hr class="sidebar-divider my-0">
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="tables.php">
-                    <i class="material-icons">home</i><span> Consulter absenc</span></a>
-            </li>
+<!-- Divider -->
+<hr class="sidebar-divider">
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="ajouter.php" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="material-icons">apps</i><span>Consulter Filier</span></a>
-                </a>
+<!-- Heading -->
 
 
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-
-            <li class="nav-item active">
-                <a class="nav-link" data-toggle="modal" data-target="#imprim" href="#" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="material-icons">equalizer</i><span> Fiche absence</span></a>
-                </a>
-
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" data-toggle="modal" data-target="#helostud" href="#" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="material-icons">equalizer</i><span>Inportais liste des Etudient</span></a>
-                </a>
-
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu --
-            >
-            <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="material-icons">extension</i> <span>Gerer les utilisateure</span></a>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.php">Login</a>
-                        <a class="collapse-item" href="register.php">Register</a>
-                        <a class="collapse-item" href="forgot-password.php">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.php">404 Page</a>
-                        <a class="collapse-item" href="blank.php">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-             Nav Item - Charts -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Notification</span></a>
-            </li>
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-
-            </div>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Gerer message des etudients </span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item active">
+    <a class="nav-link" href="ajouter.php" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <i class="material-icons">apps</i><span>Filières</span></a>
+    </a>
 
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+</li>
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+<!-- Nav Item - Utilities Collapse Menu -->
 
-            <!-- Sidebar Message -->
+<li class="nav-item active">
+    <a class="nav-link" data-toggle="modal" data-target="#imprim" href="#" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <i class="material-icons">equalizer</i><span> Fiche d'absence</span></a>
+    </a>
+
+</li>
+<li class="nav-item active">
+    <a class="nav-link" data-toggle="modal" data-target="#helostud" href="#" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <i class="material-icons">equalizer</i><span>Import des absences</span></a>
+    </a>
+
+</li>
+
+<!-- Divider -->
+<hr class="sidebar-divider">
+
+<!-- Heading -->
+<div class="sidebar-heading">
+
+</div>
+
+<!-- Nav Item - Pages Collapse Menu --
+>
+<li class="nav-item active">
+    <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <i class="material-icons">extension</i> <span>Gerer les utilisateure</span></a>
+    </a>
+    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Login Screens:</h6>
+            <a class="collapse-item" href="login.php">Login</a>
+            <a class="collapse-item" href="register.php">Register</a>
+            <a class="collapse-item" href="forgot-password.php">Forgot Password</a>
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">Other Pages:</h6>
+            <a class="collapse-item" href="404.php">404 Page</a>
+            <a class="collapse-item" href="blank.php">Blank Page</a>
+        </div>
+    </div>
+</li>
+
+ Nav Item - Charts -->
+<li class="nav-item active">
+    <a class="nav-link" href="index.php">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Notifications</span></a>
+</li>
+<hr class="sidebar-divider">
+
+<!-- Heading -->
+<div class="sidebar-heading">
+
+</div>
+
+<li class="nav-item active">
+    <a class="nav-link" href="index.php">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Gestion des messages</span></a>
+</li>
+
+<!-- Nav Item - Tables -->
 
 
-        </ul>
+<!-- Divider -->
+<hr class="sidebar-divider d-none d-md-block">
+
+<!-- Sidebar Toggler (Sidebar) -->
+<div class="text-center d-none d-md-inline">
+    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+</div>
+
+<!-- Sidebar Message -->
+
+
+</ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -287,7 +286,7 @@ if (isset($_POST["insererdatabase"])) {
                         <div class="input-group">
                             <input type="text" name="search" required value="<?php if (isset($_GET['search'])) {
                                                                                     echo $_GET['search'];
-                                                                                } ?>" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                                                                } ?>" class="form-control bg-light border-0 small" placeholder="Recherche..." aria-label="Recherche" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="submit">
                                     <i class="fas fa-search fa-sm"></i>
@@ -592,7 +591,7 @@ if (isset($_POST["insererdatabase"])) {
 
                                         <div class="form-group">
                                             <label> FILIERE </label>
-                                            <input type="text" name="filiere" id="filiere" class="form-control" placeholder="Enter Filire">
+                                            <input type="text" name="filiere" id="fil" class="form-control" placeholder="Enter Filire">
                                         </div>
                                         <div class="form-group">
                                             <label> Absence </label>
@@ -725,11 +724,11 @@ if (isset($_POST["insererdatabase"])) {
                                             <th>#</th>
                                             <th>CNE</th>
                                             <th>Nom</th>
-                                            <th>Prenom</th>
-                                            <th>Filier </th>
-                                            <th>absence </th>
+                                            <th>Prénom</th>
+                                            <th>Filière </th>
+                                            <th>Nbrs d'absence </th>
 
-                                            <th>action </th>
+                                            <th>Actions </th>
                                         </tr>
                                         <?php
                                         if ($query_run) {
@@ -745,11 +744,11 @@ if (isset($_POST["insererdatabase"])) {
                                             <td> <?php echo $row['absence']; ?> </td>
 
                                             <td>
-                                                <button type="button" class="btn btn-info viewbtn"> VIEW </button>
+                                                <button type="button" class="btn btn-info viewbtn"> <i class="fa fa-eye" aria-hidden="true"></i> </button>
 
-                                                <button type="button" class="btn btn-success editbtn"> EDIT </button>
+                                                <button type="button" class="btn btn-success editbtn"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
 
-                                                <button type="button" class="btn btn-danger deletebtn"> DELETE </button>
+                                                <button type="button" class="btn btn-danger deletebtn"> <i class="fa fa-trash" aria-hidden="true"></i> </button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -918,7 +917,7 @@ if (isset($_POST["insererdatabase"])) {
                 $('#CNE').val(data[1]);
                 $('#Nom').val(data[2]);
                 $('#Prenom').val(data[3]);
-                $('#filiere').val(data[4]);
+                $('#fil').val(data[4]);
                 $('#absence').val(data[5]);
             });
         });

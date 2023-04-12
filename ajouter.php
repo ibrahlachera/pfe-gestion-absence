@@ -68,13 +68,13 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashborde </span></a>
+                    <span>Table de bord </span></a>
             </li>
             <hr class="sidebar-divider my-0">
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="tables.php">
-                    <i class="material-icons">home</i><span> Consulter absenc</span></a>
+                    <i class="material-icons">home</i><span> Absences</span></a>
             </li>
 
             <!-- Divider -->
@@ -86,7 +86,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
                 <a class="nav-link" href="ajouter.php" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="material-icons">apps</i><span>Consulter Filier</span></a>
+                    <i class="material-icons">apps</i><span>Filières</span></a>
                 </a>
 
 
@@ -96,13 +96,13 @@
 
             <li class="nav-item active">
                 <a class="nav-link" data-toggle="modal" data-target="#imprim" href="#" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="material-icons">equalizer</i><span> Fiche absence</span></a>
+                    <i class="material-icons">equalizer</i><span> Fiche d'absence</span></a>
                 </a>
 
             </li>
             <li class="nav-item active">
                 <a class="nav-link" data-toggle="modal" data-target="#helostud" href="#" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="material-icons">equalizer</i><span>Inportais liste des Etudient</span></a>
+                    <i class="material-icons">equalizer</i><span>Import des absences</span></a>
                 </a>
 
             </li>
@@ -139,7 +139,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Notification</span></a>
+                    <span>Notifications</span></a>
             </li>
             <hr class="sidebar-divider">
 
@@ -151,7 +151,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Gerer message des etudients </span></a>
+                    <span>Gestion des messages</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
@@ -192,7 +192,7 @@
                         <div class="input-group">
                             <input type="text" name="search" required value="<?php if (isset($_GET['search'])) {
                                                                                     echo $_GET['search'];
-                                                                                } ?>" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                                                                } ?>" class="form-control bg-light border-0 small" placeholder="Recherche..." aria-label="Recherche" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="submit">
                                     <i class="fas fa-search fa-sm"></i>
@@ -220,7 +220,7 @@
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Recherche..." aria-label="Recherche" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -244,7 +244,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">importais liste </h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Import des absences</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -255,12 +255,12 @@
                                         <div class="modal-body">
                                             <div class="form-group">
                                                 <label> Annee Universitaire </label>
-                                                <input type="text" name="CNE" class="form-control" placeholder="Entrez Annee Universitaire">
+                                                <input type="text" name="CNE" class="form-control" placeholder="Année Universitaire">
                                             </div>
 
                                             <div class="form-group">
                                                 <label> Filier</label>
-                                                <input type="text" name="Nom" class="form-control" placeholder="Enter Le Nom de Filier">
+                                                <input type="text" name="Nom" class="form-control" placeholder="Filière">
                                             </div>
                                             <div>
                                                 <form enctype="multipart/form-data" action="import_csv.php" method="post">
@@ -290,7 +290,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">imprimer liste des etudient</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Liste des étudiants absents</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -300,8 +300,8 @@
 
                                         <div class="modal-body">
                                             <div class="form-group">
-                                                <label for="age">Chioisi filier :</label>
-                                                <input type="text" id="filiere" name="filiere" class="form-control" placeholder="choisi Filiere ">
+                                                <label for="age">Filière :</label>
+                                                <input type="text" id="filiere" name="filiere" class="form-control" placeholder="Filière">
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -320,46 +320,13 @@
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">+1</span>
+                                <!-- <span class="badge badge-danger badge-counter">+1</span> -->
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
-                                    Notification
+                                    Notifications
                                 </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">ecember 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
@@ -389,7 +356,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="http://localhost/hello/examples/login.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Se déconnecter
                                 </a>
                             </div>
                         </li>
@@ -403,7 +370,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
 
-                                <h5 class="modal-title" id="exampleModalLabel">Add Filier Data </h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Ajout de filière : </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -413,30 +380,30 @@
 
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label> Nom de Filiere </label>
-                                        <input type="text" name="Nom" class="form-control" placeholder="Enter Le Nom de flier">
+                                        <label> Nom de filière </label>
+                                        <input type="text" name="Nom" class="form-control" placeholder="Nom de filière">
                                     </div>
 
                                     <div class="form-group">
-                                        <label> Abreveiation de Filier </label>
-                                        <input type="text" name="Abrev" class="form-control" placeholder="Enter Abreveiation de filier">
+                                        <label> Abréviation de filière </label>
+                                        <input type="text" name="Abrev" class="form-control" placeholder="Abréviation de filière">
                                     </div>
 
                                     <div class="form-group">
-                                        <label> Deppartement </label>
-                                        <input type="text" name="deppar" class="form-control" placeholder="Enter Deppartement">
+                                        <label> Département  </label>
+                                        <input type="text" name="deppar" class="form-control" placeholder="Département">
                                     </div>
 
 
                                     <div class="form-group">
-                                        <label> Nombre d'Etudient </label>
-                                        <input type="number" name="Netud" class="form-control" placeholder="Enter Nombre des Etudient">
+                                        <label> Nombre des étudiants </label>
+                                        <input type="number" name="Netud" class="form-control" placeholder="Nombre des étudiants">
                                     </div>
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" name="insertdata" class="btn btn-primary">Save Data</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                    <button type="submit" name="insertdata" class="btn btn-primary">Ajouter</button>
                                 </div>
                             </form>
 
@@ -453,9 +420,9 @@
                     <div class="card shadow mb-4">
 
                         <div class="card-header py-3 d-flex justify-content-between align-items-center">
-                            <h6 class="m-0 font-weight-bold text-primary">Consulter absence</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Gestion des filières </h6>
                             <span type="button" class="badge badge-success" data-toggle="modal" data-target="#studentaddmodal">
-                                +add data
+                                +Ajout de filière
                             </span>
                         </div>
 
@@ -465,11 +432,11 @@
 
                                     <thead>
                                         <tr>
-                                            <th> Nom de Filier</th>
-                                            <th>Abreviation de Filier</th>
-                                            <th>Meppartement</th>
-                                            <th>Nombre des Etudient</th>
-                                            <th>Action</th>
+                                            <th> Nom de filière</th>
+                                            <th>Abreviation de filière</th>
+                                            <th>Département</th>
+                                            <th>Nombre des étudiants</th>
+                                            <th>Actions</th>
 
                                         </tr>
                                         <?php
