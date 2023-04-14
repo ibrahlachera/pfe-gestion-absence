@@ -237,14 +237,14 @@
 
 
 
-                        <!-- importais liste -->
+          <!-- importais liste -->
 
 
-                        <div class="modal fade" id="helostud" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="helostud" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">importais liste </h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Import des absences</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -255,12 +255,12 @@
                                         <div class="modal-body">
                                             <div class="form-group">
                                                 <label> Annee Universitaire </label>
-                                                <input type="text" name="CNE" class="form-control" placeholder="Entrez Annee Universitaire">
+                                                <input type="text" name="CNE" class="form-control" placeholder="Année Universitaire">
                                             </div>
 
                                             <div class="form-group">
                                                 <label> Filier</label>
-                                                <input type="text" name="Nom" class="form-control" placeholder="Enter Le Nom de Filier">
+                                                <input type="text" name="Nom" class="form-control" placeholder="Filière">
                                             </div>
                                             <div>
                                                 <form enctype="multipart/form-data" action="import_csv.php" method="post">
@@ -290,7 +290,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">imprimer liste des etudient</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Liste des étudiants absents</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -300,8 +300,8 @@
 
                                         <div class="modal-body">
                                             <div class="form-group">
-                                                <label for="age">Chioisi filier :</label>
-                                                <input type="text" id="filiere" name="filiere" class="form-control" placeholder="choisi Filiere ">
+                                                <label for="age">Filière :</label>
+                                                <input type="text" id="filiere" name="filiere" class="form-control" placeholder="Filière">
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -320,54 +320,18 @@
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">+1</span>
+                                <!-- <span class="badge badge-danger badge-counter">+1</span> -->
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
-                                    Notification
+                                    Notifications
                                 </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
-
-                        <!-- Nav Item - Messages -->
-
-                        <!-- Counter - Messages -->
-                        <span class="badge badge-danger badge-counter"></span>
+              <!-- Counter - Messages -->
+              <span class="badge badge-danger badge-counter"></span>
                         </a>
                         <!-- Dropdown - Messages -->
 
@@ -389,7 +353,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="http://localhost/hello/examples/login.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Se déconnecter
                                 </a>
                             </div>
                         </li>

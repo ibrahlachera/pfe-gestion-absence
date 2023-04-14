@@ -331,14 +331,14 @@ if (isset($_POST["insererdatabase"])) {
 
 
 
-                        <!-- importais liste -->
+                             <!-- importais liste -->
 
 
                         <div class="modal fade" id="helostud" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">importais liste </h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Import des absences</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -349,12 +349,12 @@ if (isset($_POST["insererdatabase"])) {
                                         <div class="modal-body">
                                             <div class="form-group">
                                                 <label> Annee Universitaire </label>
-                                                <input type="text" name="CNE" class="form-control" placeholder="Entrez Annee Universitaire">
+                                                <input type="text" name="CNE" class="form-control" placeholder="Année Universitaire">
                                             </div>
 
                                             <div class="form-group">
                                                 <label> Filier</label>
-                                                <input type="text" name="Nom" class="form-control" placeholder="Enter Le Nom de Filier">
+                                                <input type="text" name="Nom" class="form-control" placeholder="Filière">
                                             </div>
                                             <div>
                                                 <form enctype="multipart/form-data" action="import_csv.php" method="post">
@@ -384,7 +384,7 @@ if (isset($_POST["insererdatabase"])) {
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">imprimer liste des etudient</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Liste des étudiants absents</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -394,8 +394,8 @@ if (isset($_POST["insererdatabase"])) {
 
                                         <div class="modal-body">
                                             <div class="form-group">
-                                                <label for="age">Chioisi filier :</label>
-                                                <input type="text" id="filiere" name="filiere" class="form-control" placeholder="choisi Filiere ">
+                                                <label for="age">Filière :</label>
+                                                <input type="text" id="filiere" name="filiere" class="form-control" placeholder="Filière">
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -414,54 +414,21 @@ if (isset($_POST["insererdatabase"])) {
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">+1</span>
+                                <!-- <span class="badge badge-danger badge-counter">+1</span> -->
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
-                                    Notification
+                                    Notifications
                                 </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">ecember 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
 
                         <!-- Nav Item - Messages -->
 
-                        <!-- Counter - Messages -->
-                        <span class="badge badge-danger badge-counter"></span>
+                                     <!-- Counter - Messages -->
+                                     <span class="badge badge-danger badge-counter"></span>
                         </a>
                         <!-- Dropdown - Messages -->
 
@@ -483,7 +450,7 @@ if (isset($_POST["insererdatabase"])) {
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="http://localhost/hello/examples/login.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Se déconnecter
                                 </a>
                             </div>
                         </li>
@@ -502,13 +469,13 @@ if (isset($_POST["insererdatabase"])) {
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Add Student Data </h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Ajout d'étudiant</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
 
-                                <form action="" method="POST">
+                                <form action="ajout_student.php" method="POST">
 
                                     <div class="modal-body">
                                         <div class="form-group">
@@ -521,33 +488,38 @@ if (isset($_POST["insererdatabase"])) {
                                             <label> Nom </label>
                                             <?php if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 if (empty($_POST["Nom"])) {
-                                                    echo '<span class="erure">le nom et vide !! </span>';
+                                                    echo '<span class="erure">le nom est vide !! </span>';
                                                 }
                                             } ?>
                                             <input type="text" name="Nom" class="form-control ">
                                             <span class="invalid-feedback"></span>
                                         </div>
                                         <div class="form-group">
-                                            <label> Prenom </label>
+                                            <label> Prénom </label>
+                                            <?php if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                                if (empty($_POST["prenom"])) {
+                                                    echo '<span class="erure">le prénom est vide !! </span>';
+                                                }
+                                            } ?>
                                             <input name="prenom" class="form-control "></input>
                                             <span class="invalid-feedback"></span>
                                         </div>
 
 
                                         <div class="form-group">
-                                            <label> Filier </label>
+                                            <label> Filière </label>
                                             <input type="text" name="filiere" class="form-control" value="">
                                             <span class="invalid-feedback"></span>
                                         </div>
                                         <div class="form-group">
-                                            <label> Absence </label>
-                                            <input type="text" name="absence" class="form-control " value="">
+                                            <label> Nombre d'absence </label>
+                                            <input type="number" name="absence" class="form-control " value="0">
                                             <span class="invalid-feedback"></span>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <input type="submit" name="insererdatabase" class="btn btn-primary" value="Submit">
-                                        <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
+                                        <input type="submit" name="insererdatabase" class="btn btn-primary" value="Ajouter">
+                                        <a href="index.php" class="btn btn-secondary ml-2">Annuler</a>
                                     </div>
                                 </form>
 
@@ -562,7 +534,7 @@ if (isset($_POST["insererdatabase"])) {
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel"> Edit Student Data </h5>
+                                    <h5 class="modal-title" id="exampleModalLabel"> Modifier un étudiant </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -576,31 +548,31 @@ if (isset($_POST["insererdatabase"])) {
 
                                         <div class="form-group">
                                             <label> CNE </label>
-                                            <input type="text" name="CNE" id="CNE" class="form-control" placeholder="Enter CNE">
+                                            <input type="text" name="CNE" id="CNE" class="form-control" placeholder="CNE">
                                         </div>
 
                                         <div class="form-group">
                                             <label> Nom </label>
-                                            <input type="text" name="Nom" id="Nom" class="form-control" placeholder="Enter NOM">
+                                            <input type="text" name="Nom" id="Nom" class="form-control" placeholder="Nom d'étudiant">
                                         </div>
 
                                         <div class="form-group">
-                                            <label> Prenom </label>
-                                            <input type="text" name="Prenom" id="Prenom" class="form-control" placeholder="Enter Prenom">
+                                            <label> Prénom </label>
+                                            <input type="text" name="Prenom" id="Prenom" class="form-control" placeholder="Prénom d'étudiant">
                                         </div>
 
                                         <div class="form-group">
-                                            <label> FILIERE </label>
-                                            <input type="text" name="filiere" id="fil" class="form-control" placeholder="Enter Filire">
+                                            <label> Filière </label>
+                                            <input type="text" name="filiere" id="fil" class="form-control" placeholder="Filière">
                                         </div>
                                         <div class="form-group">
-                                            <label> Absence </label>
-                                            <input type="text" name="absence" id="absence" class="form-control" placeholder="Enter absence ">
+                                            <label> Nombre d'absence </label>
+                                            <input type="text" name="absence" id="absence" class="form-control" placeholder="Absence">
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="submit" name="updatedata" class="btn btn-primary">Update Data</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                                        <button type="submit" name="updatedata" class="btn btn-primary">Modifier</button>
                                     </div>
                                 </form>
 
@@ -613,7 +585,7 @@ if (isset($_POST["insererdatabase"])) {
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel"> Delete Student Data </h5>
+                                    <h5 class="modal-title" id="exampleModalLabel"> Supprimer un étudiant </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -625,11 +597,11 @@ if (isset($_POST["insererdatabase"])) {
 
                                         <input type="hidden" name="delete_id" id="delete_id">
 
-                                        <h4> Do you want to Delete this Data ??</h4>
+                                        <h4> Vous voulez supprimer cet étudiant? <br> NB: il sera supprimer définitivement et vous ne pouvez pas le récupérer</h4>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> NO </button>
-                                        <button type="submit" name="deletedata" class="btn btn-primary"> Yes !! Delete it. </button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Annuler </button>
+                                        <button type="submit" name="deletedata" class="btn btn-danger"> Supprimer </button>
                                     </div>
                                 </form>
 
@@ -643,7 +615,7 @@ if (isset($_POST["insererdatabase"])) {
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel"> View Student Data </h5>
+                                    <h5 class="modal-title" id="exampleModalLabel"> Carte d'étudiant </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -653,14 +625,19 @@ if (isset($_POST["insererdatabase"])) {
 
                                     <div class="modal-body">
 
-                                        <input type="text" name="view_id" id="view_id">
-
-                                        <!-- <p id="fname"> </p> -->
-                                        <h4 id="Nom"> <?php echo ''; ?> </h4>
+                                    <div class="card" style="width: 18rem;">
+  <div class="card-header" id="fullname">
+    
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" id= "show_cne"></li>
+    <li class="list-group-item" id="show_filiere"></li>
+    <li class="list-group-item" id="show_nbr_abs"></li>
+  </ul>
+</div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> CLOSE </button>
-                                        <!-- <button type="submit" name="deletedata" class="btn btn-primary"> Yes !! Delete it. </button> -->
+                                        <button type="button" class="btn btn-warning" data-dismiss="modal"> Fermer </button>
                                     </div>
                                 </form>
 
@@ -668,7 +645,7 @@ if (isset($_POST["insererdatabase"])) {
                         </div>
                     </div>
                     <!-- DELETE POP UP FORM (Bootstrap MODAL) -->
-                    <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <!-- <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -694,15 +671,15 @@ if (isset($_POST["insererdatabase"])) {
 
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <div class="card shadow mb-4">
 
                         <div class="card-header py-3 d-flex justify-content-between align-items-center">
-                            <h6 class="m-0 font-weight-bold text-primary">Consulter absence</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Gestion des absences </h6>
                             <span type="button" class="badge badge-success" data-toggle="modal" data-target="#studentaddmodal">
-                                +add data
+                                Ajouter un étudiant
                             </span>
                         </div>
 
@@ -726,7 +703,7 @@ if (isset($_POST["insererdatabase"])) {
                                             <th>Nom</th>
                                             <th>Prénom</th>
                                             <th>Filière </th>
-                                            <th>Nbrs d'absence </th>
+                                            <th>Nombre d'absence </th>
 
                                             <th>Actions </th>
                                         </tr>
@@ -804,7 +781,7 @@ if (isset($_POST["insererdatabase"])) {
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -820,7 +797,7 @@ if (isset($_POST["insererdatabase"])) {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -838,24 +815,7 @@ if (isset($_POST["insererdatabase"])) {
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
 
-    <script>
-        $(document).ready(function() {
 
-            $('.viewbtn').on('click', function() {
-                $('#viewmodal').modal('show');
-                $.ajax({ //create an ajax request to display.php
-                    type: "GET",
-                    url: "display.php",
-                    dataType: "html", //expect html to be returned                
-                    success: function(response) {
-                        $("#responsecontainer").html(response);
-                        //alert(response);
-                    }
-                });
-            });
-
-        });
-    </script>
 
 
     <script>
@@ -921,6 +881,26 @@ if (isset($_POST["insererdatabase"])) {
                 $('#absence').val(data[5]);
             });
         });
+        $(document).ready(function() {
+
+$('.viewbtn').on('click', function() {
+
+    $('#viewmodal').modal('show');
+    $tr = $(this).closest('tr');
+
+    var data = $tr.children("td").map(function() {
+                    return $(this).text();
+                }).get();
+
+
+    document.getElementById('fullname').innerHTML = data[2]+' '+data[3];
+    document.getElementById('show_cne').innerHTML = 'CNE : '+data[1];
+    document.getElementById('show_filiere').innerHTML = 'Filère : '+data[4];
+    document.getElementById('show_nbr_abs').innerHTML = 'Nombre des absences cumulés : '+data[5];
+
+});
+});
+        
     </script>
 
 
