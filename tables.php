@@ -1,5 +1,5 @@
 <?php
-
+include "./filiere/getAllFil.php";
 $connection = mysqli_connect("localhost", "root", "");
 $db = mysqli_select_db($connection, 'myappp');
 
@@ -508,7 +508,11 @@ if (isset($_POST["insererdatabase"])) {
 
                                         <div class="form-group">
                                             <label> Filière </label>
-                                            <input type="text" name="filiere" class="form-control" value="">
+                                            <select name="filiere"  class="form-control" value="">
+                                            <?php foreach ($filieres as $filiere) { ?>
+                                                <option value="<?php echo $filiere[1] ?>"><?php echo $filiere[0] ?></option>
+                                            <?php }  ?>
+                                            </select>
                                             <span class="invalid-feedback"></span>
                                         </div>
                                         <div class="form-group">
@@ -561,9 +565,15 @@ if (isset($_POST["insererdatabase"])) {
                                             <input type="text" name="Prenom" id="Prenom" class="form-control" placeholder="Prénom d'étudiant">
                                         </div>
 
+                                        
                                         <div class="form-group">
                                             <label> Filière </label>
-                                            <input type="text" name="filiere" id="fil" class="form-control" placeholder="Filière">
+                                            <select name="filiere" id="fil" class="form-control" value="">
+                                            <?php foreach ($filieres as $filiere) { ?>
+                                                <option value="<?php echo $filiere[1] ?>"><?php echo $filiere[0] ?></option>
+                                            <?php }  ?>
+                                            </select>
+                                            <span class="invalid-feedback"></span>
                                         </div>
                                         <div class="form-group">
                                             <label> Nombre d'absence </label>
@@ -857,6 +867,10 @@ if (isset($_POST["insererdatabase"])) {
     </script>
 
     <script>
+        function selectElement(id, valueToSelect) {    
+             let element = document.getElementById(id);
+            element.value = valueToSelect;
+        }
         $(document).ready(function() {
 
             $('.editbtn').on('click', function() {
@@ -875,7 +889,7 @@ if (isset($_POST["insererdatabase"])) {
                 $('#CNE').val(data[1]);
                 $('#Nom').val(data[2]);
                 $('#Prenom').val(data[3]);
-                $('#fil').val(data[4]);
+                selectElement('fil', data[4].trim());
                 $('#absence').val(data[5]);
             });
         });
