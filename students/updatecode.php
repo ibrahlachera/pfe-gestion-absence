@@ -16,7 +16,7 @@ if (isset($_POST['updatedata'])) {
         $query_run = mysqli_query($connection, $query);
         if ($query_run) {
             echo '<script> alert("Modification d\'étudiant avec succès"); </script>';
-            header('Location: tables.php');
+            header('Location: ../tables.php');
         } else {
             echo '<script> alert("étudiant non modofié"); </script>';
         }

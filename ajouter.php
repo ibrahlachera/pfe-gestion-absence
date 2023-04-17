@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>gestion absence</title>
+    <title>Gestion des absences</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
 
@@ -376,7 +376,7 @@
                                 </button>
                             </div>
 
-                            <form action="ajocon.php" method="POST">
+                            <form action="filiere/ajocon.php" method="POST">
 
                                 <div class="modal-body">
                                     <div class="form-group">
@@ -403,7 +403,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                    <button type="submit" name="insertdata" class="btn btn-primary">Ajouter</button>
+                                    <button type="submit" name="insertdatafil" class="btn btn-primary">Ajouter</button>
                                 </div>
                             </form>
 
@@ -457,13 +457,11 @@
                                                     <td><?= $row['deppar'] ?></td>
                                                     <td><?= $row['Netud'] ?></td>
 
-                                                    <td><a data-toggle="modal" data-target="#deletemodal"><img src="img/supr.png">
-
-                                                            <a data-toggle="modal" data-target="#editmodal"><img src="img/edit.png">
-
-
-
-                                                            </a></td>
+                                                    <td>
+                                                        <a data-toggle="modal" data-target="#showmodal" class="viewbtnfil"><img src="img/affiche.png"></a>
+                                                        <a data-toggle="modal" data-target="#editmodal" class="editbtn"><img src="img/editt.png"></a>
+                                                        <a data-toggle="modal" data-target="#deletemodal" class="deletebtn"><img src="img/supr.png"></a>
+                                                        </td>
 
                                                 </tr>
                                         <?php
@@ -507,7 +505,82 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+    <div class="modal fade" id="showmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"> Fiche de filière </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
 
+
+                                    <div class="modal-body">
+
+                                    <div class="card" style="width: 18rem;">
+  <div class="card-header" id="nom_fil">
+    
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" id= "dept"></li>
+    <li class="list-group-item" id="abrev"></li>
+    <li class="list-group-item" id="number_stud"></li>
+  </ul>
+</div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-warning" data-dismiss="modal"> Fermer </button>
+                                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"> Modifier une filière </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <form action="filiere/update_filiere.php" method="POST">
+
+                                    <div class="modal-body">
+                                    <input type="hidden" name="update_name" id="update_name">
+
+                                        <div class="form-group">
+                                            <label> Nom de filière </label>
+                                            <input type="text" name="nom_fil" id="nom_fil_data" class="form-control" placeholder="Nom de filière">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label> Abreviation de filière </label>
+                                            <input type="text" name="abrev" id="abrev_data" class="form-control" placeholder="Abreviation de filière">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label> Département </label>
+                                            <input type="text" name="dept" id="dept_data" class="form-control" placeholder="Département">
+                                        </div>
+                                        <div class="form-group">
+                                            <label> Nombre des étudiants </label>
+                                            <input type="text" name="number_stud" id="number_stud_data" class="form-control" placeholder="Nombre des étudiants">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                                        <button type="submit" name="updatedatafil" class="btn btn-primary">Modifier</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -526,7 +599,33 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"> Supprimer une filière </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
 
+                                <form action="filiere/delete_filiere.php" method="POST">
+
+                                    <div class="modal-body">
+
+                                        <input type="hidden" name="nom_fil_del" id="nom_fil_del">
+
+                                        <h4> Vous voulez supprimer cette filière? <br> NB: il sera supprimer définitivement et vous ne pouvez pas le récupérer</h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Annuler </button>
+                                        <button type="submit" name="deletedatafil" class="btn btn-danger"> Supprimer </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -544,7 +643,64 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+    <script>
+                $(document).ready(function() {
+    $('.viewbtnfil').on('click', function() {
 
+$('#showmodal').modal('show');
+$tr = $(this).closest('tr');
+
+var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
+document.getElementById('nom_fil').innerHTML = 'Filière : '+data[0];
+document.getElementById('dept').innerHTML = 'Département : '+data[2];
+document.getElementById('abrev').innerHTML = 'Abréviation de filière : '+data[1];
+document.getElementById('number_stud').innerHTML = 'Nombre des étudiants : '+data[3];
+
+});
+});
+$(document).ready(function() {
+
+$('.editbtn').on('click', function() {
+
+    $('#editmodal').modal('show');
+
+    $tr = $(this).closest('tr');
+
+    var data = $tr.children("td").map(function() {
+        return $(this).text();
+    }).get();
+
+console.log(data)
+update_name
+    $('#nom_fil_data').val(data[0]);
+    $('#update_name').val(data[0]);
+    $('#abrev_data').val(data[1]);
+    $('#dept_data').val(data[2]);
+    $('#number_stud_data').val(data[3]);
+});
+});
+
+$(document).ready(function() {
+
+$('.deletebtn').on('click', function() {
+
+    $('#deletemodal').modal('show');
+
+    $tr = $(this).closest('tr');
+
+    var data = $tr.children("td").map(function() {
+        return $(this).text();
+    }).get();
+
+    console.log(data);
+
+    $('#nom_fil_del').val(data[0]);
+
+});
+});
+</script>
 </body>
 
 </html>

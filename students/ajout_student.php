@@ -18,12 +18,12 @@ if (isset($_POST['insererdatabase'])) {
         $query_run = mysqli_query($connection, $query);
         if ($query_run) {
             echo '<script> alert("Ajout d\'étudiant avec succès"); </script>';
-            header('Location: tables.php');
+            header('Location: ../tables.php');
         } else {
             echo '<script> alert("étudiant non ajouté"); </script>';
         }
     }else{
         echo '<script> alert("Etudiant existe déjà"); </script>';
-        header( "refresh:0;url=tables.php" );
+        header( "refresh:0;url=../tables.php" );
     }
 }

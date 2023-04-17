@@ -104,7 +104,7 @@ if (isset($_POST["insererdatabase"])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>gestion absence</title>
+    <title>Gestion des absences</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
 
@@ -475,7 +475,7 @@ if (isset($_POST["insererdatabase"])) {
                                     </button>
                                 </div>
 
-                                <form action="ajout_student.php" method="POST">
+                                <form action="students/ajout_student.php" method="POST">
 
                                     <div class="modal-body">
                                         <div class="form-group">
@@ -540,7 +540,7 @@ if (isset($_POST["insererdatabase"])) {
                                     </button>
                                 </div>
 
-                                <form action="updatecode.php" method="POST">
+                                <form action="students/updatecode.php" method="POST">
 
                                     <div class="modal-body">
 
@@ -591,7 +591,7 @@ if (isset($_POST["insererdatabase"])) {
                                     </button>
                                 </div>
 
-                                <form action="deletecode.php" method="POST">
+                                <form action="students/deletecode.php" method="POST">
 
                                     <div class="modal-body">
 
@@ -621,7 +621,6 @@ if (isset($_POST["insererdatabase"])) {
                                     </button>
                                 </div>
 
-                                <form action="deletecode.php" method="POST">
 
                                     <div class="modal-body">
 
@@ -639,7 +638,6 @@ if (isset($_POST["insererdatabase"])) {
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-warning" data-dismiss="modal"> Fermer </button>
                                     </div>
-                                </form>
 
                             </div>
                         </div>

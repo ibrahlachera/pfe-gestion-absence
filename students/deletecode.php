@@ -10,7 +10,7 @@ if (isset($_POST['deletedata'])) {
 
     if ($query_run) {
         echo '<script> alert("Data Deleted"); </script>';
-        header("Location:tables.php");
+        header("Location:../tables.php");
     } else {
         echo '<script> alert("Data Not Deleted"); </script>';
     }

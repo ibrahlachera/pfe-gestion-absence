@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>gestion absence</title>
+    <title>Gestion des absences</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
 
